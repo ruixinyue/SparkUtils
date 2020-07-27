@@ -9,7 +9,7 @@ import org.apache.commons.configuration2.builder.fluent.Parameters
  * 方法一：
  * 使用FileBasedConfigurationBuilder
  */
-object ConfigurationManager {
+object ConfigManagerFileBased {
 
   // 创建用于初始化配置生成器实例的参数对象
   private val params = new Parameters()
@@ -23,5 +23,5 @@ object ConfigurationManager {
     .configure(params.properties().setFileName("commerce.properties"))
 
   // 通过getConfiguration获取配置对
-  private val config: FileBasedConfiguration = builder.getConfiguration
+  val config: FileBasedConfiguration = builder.getConfiguration
 }
